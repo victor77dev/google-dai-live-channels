@@ -99,6 +99,9 @@ function loadStream() {
   if (currentChannel.dai) {
     requestLiveStream(TEST_ASSET_KEY, null);
   } else {
+    // Here! We would like to have some way to stop or pause the SDK
+    // say streamManager.unloadStream();
+    // to pause it until the next DAI streamrequest
     loadUrl(currentChannel.url);
   }
 }
